@@ -1,0 +1,21 @@
+Verification performed while preparing the lab bundle
+
+1. Python syntax/bytecode compilation:
+   Command: python -m py_compile pet_shelter.py
+   Result: PASS (no syntax errors).
+
+2. Functional smoke tests:
+   - Register pets and verify separate default tag lists: PASS
+   - Return the oldest available pet: PASS
+   - Adoption marks a record and updates status: PASS
+   - Repeated adoption does not increment adoption count: PASS
+   - Clear unadopted pets returns the deleted-row count: PASS
+   - Empty shelter lookup returns None: PASS
+   - Reject invalid names/species/ages/IDs: PASS
+
+3. Demo execution:
+   Command: python pet_shelter.py
+   Result: PASS; produced output via logging and completed deletion.
+
+4. Pylint / Bandit / Flake8:
+   Not run in this environment. These packages were not installed, and pip could not access the package index because network name resolution was unavailable. Run `bash run_analysis.sh` in your own terminal to generate real reports.
